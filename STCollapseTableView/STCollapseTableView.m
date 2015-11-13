@@ -91,7 +91,9 @@
 
 - (void)setDelegate:(id<UITableViewDelegate>)newDelegate
 {
-    if (newDelegate != self.collapseDelegate)
+    
+    //add condition compire nill
+    if (newDelegate != nil && newDelegate != self.collapseDelegate)
     {
         self.collapseDelegate = newDelegate;
         [super setDelegate:self.collapseDelegate?self:nil];
